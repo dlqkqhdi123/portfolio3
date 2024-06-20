@@ -1,0 +1,8 @@
+/* ProjectsSection.module.css */
+.projectCard {
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+}
