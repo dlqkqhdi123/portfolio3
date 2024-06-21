@@ -89,6 +89,18 @@ const AdditionalText = styled.div`
   }
 `;
 
+const HighlightedSpan = styled.span`
+  color: yellow;
+  padding: 2px 4px;
+  border-radius: 3px;
+`;
+
+const BronzeSpan = styled.span`
+  color: orange;
+  padding: 2px 4px;
+  border-radius: 3px;
+`;
+
 const AboutSection = () => {
   const settings = {
     dots: true,
@@ -110,33 +122,45 @@ const AboutSection = () => {
           <SliderContainer>
             <Slider {...settings}>
               <Slide>
-                <MainHeading>연락처</MainHeading>
+                <MainHeading>소개</MainHeading>
                 <AdditionalText>
-                  <p>Email: example@example.com</p>
-                  <p>Phone: 010-1234-5678</p>
+                  <p>이름: 이건</p>
+                  <p>나이: 1997년08월08일(만26세)</p>
+                  <p>기술: React, Html, CSS, Javascript, GitHub...</p>
+                  <p>Email: dlrjs6949@gmail.com</p>
                 </AdditionalText>
               </Slide>
               <Slide>
                 <MainHeading>학력</MainHeading>
                 <AdditionalText>
-                  <p>대학교: 서울대학교 컴퓨터공학과</p>
-                  <p>졸업연도: 2022</p>
+                  <p>대학교: 충청대학교</p>
+                  <p>졸업연도: 2018</p>
                 </AdditionalText>
               </Slide>
               <Slide>
                 <MainHeading>경력</MainHeading>
                 <AdditionalText>
-                  <p>회사: ABC Corp</p>
-                  <p>직위: 프론트엔드 개발자</p>
-                  <p>기간: 2022 - 현재</p>
+                  <p>DW아카데미 데이터시각화 2회차 수료</p>
+                  <p>신입</p>
                 </AdditionalText>
               </Slide>
               <Slide>
                 <MainHeading>수상 이력</MainHeading>
                 <AdditionalText>
-                  <p>수상명: Best Developer Award</p>
-                  <p>수상기관: ABC Corp</p>
-                  <p>수상연도: 2023</p>
+                  <p>
+                    수상명: <br />
+                    청주 시장배 유도대회 개인전{" "}
+                    <HighlightedSpan>금메달</HighlightedSpan>
+                    <br />
+                    충북 도지사배 유도대회 개인전{" "}
+                    <HighlightedSpan>금메달</HighlightedSpan>
+                    <br />
+                    충북 도지사배 유도대회 단체전{" "}
+                    <BronzeSpan>동메달</BronzeSpan>
+                    <br />
+                    전국체전 참가
+                  </p>
+                  <p>사용기술: 허리후리기, 밭다리, 한팔업어치기, 빗 당겨치기</p>
                 </AdditionalText>
               </Slide>
             </Slider>

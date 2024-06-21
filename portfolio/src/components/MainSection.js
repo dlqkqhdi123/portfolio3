@@ -32,8 +32,10 @@ const MainSection = () => {
   return (
     <Element name="main">
       <MainSectionContainer>
-        <MainHeading>Welcome to My Portfolio</MainHeading>
-        <SubHeading>Explore my work and projects</SubHeading>
+        <MainHeading>꿈을 코드로 변환하는 신입 개발자 </MainHeading>
+        <SubHeading>
+          창의성을 코드로 코드를 현실로 바로 지금부터 입니다.
+        </SubHeading>
         <Cube />
       </MainSectionContainer>
     </Element>

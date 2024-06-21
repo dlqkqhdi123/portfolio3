@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
 import styles from "./ProjectsSection.module.css";
+import project1Image from "../assets/img/logoComputer.png";
+import project2Image from "../assets/img/pet partner.png";
+import newImage1 from "../assets/img/studyLink.PNG"; // 새로운 이미지1
+import newImage2 from "../assets/img/hostpetalMain.jpg"; // 새로운 이미지2
 
 const ProjectsContainer = styled.section`
   padding: 100px 20px;
@@ -13,7 +17,7 @@ const ProjectsContainer = styled.section`
 const ProjectsHeading = styled.h2`
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #64ffda;
+  color: #fff;
 `;
 
 const ProjectsText = styled.p`
@@ -31,17 +35,16 @@ const ProjectsGrid = styled.div`
 const ProjectCard = styled.div`
   flex: 1;
   max-width: 400px;
-  border: 2px solid #64ffda;
+  border: 2px solid #000;
   border-radius: 8px;
   padding: 20px;
   background: #112240;
   transition: transform 0.3s ease-in-out;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: start;
   gap: 20px;
 
   &:hover {
@@ -54,10 +57,10 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   margin-bottom: 20px;
-  border-radius: 50%;
+  border-radius: 10%;
 `;
 
 const ModalBackground = styled.div`
@@ -76,8 +79,8 @@ const ModalBackground = styled.div`
 const ModalContainer = styled.div`
   background: #112240;
   border-radius: 8px;
-  max-width: 800px;
-  width: 100%;
+  width: 50%;
+  height: 50%;
   color: white;
   display: flex;
   overflow: hidden;
@@ -94,6 +97,26 @@ const ModalContent = styled.div`
   padding: 20px;
   position: relative;
   text-align: left;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #64ffda;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ModalCloseButton = styled.button`
@@ -125,23 +148,29 @@ const ProjectsSection = () => {
     <Element name="projects">
       <ProjectsContainer>
         <ProjectsHeading>Projects</ProjectsHeading>
-        <ProjectsText>Here you can showcase your projects.</ProjectsText>
+        <ProjectsText>
+          지금까지 DW아카데미를 다니면서 만든 프로젝트입니다.
+          <br />
+          계속 추가될 예정입니다
+        </ProjectsText>
         <ProjectsGrid>
           <ProjectCard
             onClick={() =>
               handleCardClick({
-                title: "Project 1",
-                duration: "January 2023 - June 2023",
-                team: "Team A",
-                image: "https://via.placeholder.com/400", // 예시 이미지 URL
+                title: "복습하자",
+                duration: "2023.11.22 ~ 2023.12.06",
+                team: "2조",
+                image: project1Image,
+                modalImage: newImage1,
+                link: "https://courageous-sprinkles-60c4e0.netlify.app/",
+                description: `내용: DW아카데미를 시작하고 처음 하게된 중간프로젝트입니다. 
+                조장을 맡아 프로젝트를 진행하였으며 
+                학원 다니면서 복습의 중요성을 강조하시던 선생님의 말씀을 기억하여 만들게 되었습니다.`,
               })
             }
             className={styles.projectCard}
           >
-            <ProjectImage
-              src="https://via.placeholder.com/50"
-              alt="Project 1"
-            />
+            <ProjectImage src={project1Image} alt="Project 1" />
             <div>
               <h3>복습하자</h3>
               <p>복습을 위한 홈페이지</p>
@@ -150,18 +179,20 @@ const ProjectsSection = () => {
           <ProjectCard
             onClick={() =>
               handleCardClick({
-                title: "Project 2",
-                duration: "July 2023 - December 2023",
-                team: "Team B",
-                image: "https://via.placeholder.com/400", // 예시 이미지 URL
+                title: "Hostpetal",
+                duration: "2023.12.26 ~ 2024.02.22",
+                team: "2조",
+                image: project2Image,
+                modalImage: newImage2,
+                link: "https://dlqkqhdi123.github.io/newtry/",
+                description: `내용: Hostpetal 프로젝트는 동물 병원 검색을 위한 웹사이트입니다. 
+                이 프로젝트에서는 팀의 일원으로서 Diseas 파트와 MyPage 파트 기능 구현을 담당하였습니다. 
+                사용자 편의성을 고려한 UI/UX 디자인을 중점적으로 작업했습니다.`,
               })
             }
             className={styles.projectCard}
           >
-            <ProjectImage
-              src="https://via.placeholder.com/50"
-              alt="Project 2"
-            />
+            <ProjectImage src={project2Image} alt="Project 2" />
             <div>
               <h3>Hostpetal</h3>
               <p>동물 병원 서치 홈페이지</p>
@@ -172,7 +203,7 @@ const ProjectsSection = () => {
           <ModalBackground onClick={handleCloseModal}>
             <ModalContainer onClick={(e) => e.stopPropagation()}>
               <ModalImage
-                style={{ backgroundImage: `url(${modalContent.image})` }}
+                style={{ backgroundImage: `url(${modalContent.modalImage})` }}
               />
               <ModalContent>
                 <ModalCloseButton onClick={handleCloseModal}>
@@ -185,6 +216,14 @@ const ProjectsSection = () => {
                 <p>
                   <strong>Team:</strong> {modalContent.team}
                 </p>
+                <p>{modalContent.description}</p>
+                <a
+                  href={modalContent.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  프로젝트 링크
+                </a>
               </ModalContent>
             </ModalContainer>
           </ModalBackground>
