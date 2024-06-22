@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio3/static/css/main.b141aedc.css",
+    "main.js": "/portfolio3/static/js/main.35bc3e19.js",
+    "static/media/studyLink.PNG": "/portfolio3/static/media/studyLink.488ec36aa623433e58db.PNG",
+    "static/media/Figma.png": "/portfolio3/static/media/Figma.e3eda632293ac2143a26.png",
+    "static/media/hostpetalMain.jpg": "/portfolio3/static/media/hostpetalMain.5f14f85f793c59a0b1a6.jpg",
+    "static/media/제이커리.png": "/portfolio3/static/media/제이커리.5218d846e86fbcafcc5d.png",
+    "static/media/lg.jpg": "/portfolio3/static/media/lg.099fabe0d313bda88287.jpg",
+    "static/media/자바스크립트.png": "/portfolio3/static/media/자바스크립트.166865dacb77d214f485.png",
+    "static/media/CSS.png": "/portfolio3/static/media/CSS.7f03bab25789e1b15d38.png",
+    "static/media/pet partner.png": "/portfolio3/static/media/pet partner.fbedffcdfac750e78e04.png",
+    "static/media/HTML5.png": "/portfolio3/static/media/HTML5.ee0324de57bbf6d2511c.png",
+    "static/media/logoComputer.png": "/portfolio3/static/media/logoComputer.88911eaafdaf4ef6507b.png",
+    "static/media/firebase.png": "/portfolio3/static/media/firebase.65c4fe9f7eb228db7a4c.png",
+    "static/media/slick.svg": "/portfolio3/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/portfolio3/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/portfolio3/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/portfolio3/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/github.svg": "/portfolio3/static/media/github.6fa18895f6e6c7772cab7049f7e05f59.svg",
+    "index.html": "/portfolio3/index.html",
+    "main.b141aedc.css.map": "/portfolio3/static/css/main.b141aedc.css.map",
+    "main.35bc3e19.js.map": "/portfolio3/static/js/main.35bc3e19.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b141aedc.css",
+    "static/js/main.35bc3e19.js"
+  ]
+}
